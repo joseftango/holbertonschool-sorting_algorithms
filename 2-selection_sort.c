@@ -27,6 +27,9 @@ void selection_sort(int *array, size_t size)
 {
 unsigned int i, j, min = 0;
 
+if (size < 2 || array == NULL)
+return;
+
 for (i = 0; i < size - 1; i++)
 {
 min = i;
@@ -40,7 +43,6 @@ min = j;
 
 if (min != i)
 swap_two_int(&array[i], &array[min]);
-
 print_array(array, size);
 
 }
