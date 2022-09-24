@@ -25,7 +25,7 @@ tmp = *a;
 
 void selection_sort(int *array, size_t size)
 {
-unsigned int i, j, min = 0;
+size_t i, j, min = 0;
 
 if (size < 2 || array == NULL)
 return;
@@ -38,12 +38,13 @@ for (j = i + 1; j < size; j++)
 {
 if (array[j] < array[min])
 min = j;
-
 }
 
 if (min != i)
-swap_two_int(&array[i], &array[min]);
+{
+swap_two_int(&array[min], &array[i]);
 print_array(array, size);
+}
 
 }
 
