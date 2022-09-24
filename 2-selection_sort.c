@@ -40,7 +40,7 @@ if (array[j] < array[min])
 min = j;
 }
 
-if (array[min] != array[i])
+if (min != i)
 {
 swap_two_int(&array[min], &array[i]);
 print_array(array, size);
